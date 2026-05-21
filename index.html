@@ -273,12 +273,71 @@
             gameplay problem your team is trying to solve.
           </p>
         </div>
-        <!-- Replace the placeholder email and social links with your live contact routes. -->
-        <div class="contact-actions">
-          <a href="mailto:hello@example.com">hello@example.com</a>
-          <a href="#" aria-label="Portfolio resume link">Resume</a>
-          <a href="#" aria-label="Professional profile link">Profile</a>
-        </div>
+        <!--
+          Static contact form:
+          FormSubmit emails submissions to the address in the form action.
+          On first use, confirm the activation email it sends before messages forward.
+        -->
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/Harris.iqbal@live.com"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New portfolio message"
+          />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://iqbalharris.github.io/portfolio/thanks.html"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <label class="form-field">
+            <span>Name</span>
+            <input
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Your name"
+              required
+            />
+          </label>
+          <label class="form-field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@studio.com"
+              required
+            />
+          </label>
+          <label class="form-field form-field-wide">
+            <span>What can I help with?</span>
+            <input
+              type="text"
+              name="subject"
+              placeholder="Consultation, project work, feedback..."
+              required
+            />
+          </label>
+          <label class="form-field form-field-wide">
+            <span>Message</span>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Tell me a little about the game, the team, or the design problem."
+              required
+            ></textarea>
+          </label>
+          <label class="form-trap" aria-hidden="true">
+            <span>Leave this empty</span>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
+          </label>
+          <button class="form-submit" type="submit">Send message</button>
+        </form>
       </section>
     </main>
   </body>

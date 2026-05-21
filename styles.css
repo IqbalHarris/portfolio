@@ -236,7 +236,6 @@ h1 {
 }
 
 .primary-action,
-.contact-actions a,
 .case-link {
   align-items: center;
   border: 1px solid rgba(156, 233, 241, 0.44);
@@ -258,7 +257,6 @@ h1 {
 }
 
 .primary-action:hover,
-.contact-actions a:hover,
 .case-link:hover {
   background: rgba(156, 233, 241, 0.2);
   border-color: var(--cyan);
@@ -594,23 +592,113 @@ h3 {
 }
 
 .contact {
-  align-items: end;
+  align-items: center;
   border-top: 1px solid var(--line);
   display: grid;
-  gap: 2rem;
-  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(18rem, 0.82fr) minmax(22rem, 1fr);
   padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 3vw, 2.5rem);
-}
-
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  justify-content: end;
 }
 
 .contact p {
   margin: 1.25rem 0 0;
+}
+
+.contact-form {
+  backdrop-filter: blur(0.65rem);
+  background:
+    linear-gradient(145deg, rgba(156, 233, 241, 0.11), transparent 32%),
+    rgba(7, 12, 14, 0.76);
+  border: 1px solid rgba(235, 245, 247, 0.22);
+  box-shadow: 0 1.25rem 5rem rgba(0, 0, 0, 0.22);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.form-field {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.form-field-wide,
+.form-submit {
+  grid-column: 1 / -1;
+}
+
+.form-field span {
+  color: var(--cyan);
+  font-size: 0.75rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  background: rgba(4, 8, 10, 0.72);
+  border: 1px solid rgba(235, 245, 247, 0.2);
+  border-radius: 0;
+  color: var(--ink);
+  font: inherit;
+  letter-spacing: 0;
+  min-height: 3.25rem;
+  padding: 0.85rem 0.95rem;
+  resize: vertical;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+  width: 100%;
+}
+
+.form-field textarea {
+  min-height: 9.5rem;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(174, 184, 189, 0.78);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  background: rgba(8, 14, 17, 0.92);
+  border-color: rgba(156, 233, 241, 0.68);
+  box-shadow: 0 0 0 3px rgba(156, 233, 241, 0.12);
+  outline: none;
+}
+
+.form-trap {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
+
+.form-submit {
+  background: rgba(156, 233, 241, 0.12);
+  border: 1px solid rgba(156, 233, 241, 0.44);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 850;
+  min-height: 3.35rem;
+  padding: 0.9rem 1.2rem;
+  text-transform: uppercase;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.form-submit:hover,
+.form-submit:focus-visible {
+  background: rgba(156, 233, 241, 0.22);
+  border-color: var(--cyan);
+  transform: translateY(-2px);
 }
 
 /* Shared case study styles keep the linked project pages lightweight. */
@@ -649,6 +737,15 @@ h3 {
   display: grid;
   gap: 1.25rem;
   padding: clamp(1.5rem, 5vw, 5rem);
+}
+
+.thank-you-hero {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: min(62vh, 34rem);
+}
+
+.thank-you-hero .case-body {
+  justify-items: start;
 }
 
 .case-details {
@@ -932,8 +1029,8 @@ h3 {
     height: auto;
   }
 
-  .contact-actions {
-    justify-content: start;
+  .contact-form {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -975,9 +1072,9 @@ h3 {
   }
 
   .primary-action,
-  .contact-actions a,
   .case-link,
-  .project-link {
+  .project-link,
+  .form-submit {
     transition: none;
   }
 }
