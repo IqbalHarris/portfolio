@@ -133,10 +133,10 @@ a {
 
 .hero-video {
   filter: saturate(0.88) contrast(1.05);
-  height: 100%;
+  height: 150%;
   inset: 0;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.7;
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -237,8 +237,53 @@ h1 {
   color: #dce3e5;
   font-size: clamp(1rem, 1.7vw, 1.35rem);
   line-height: 1.55;
-  margin-bottom: 2rem;
-  max-width: 33rem;
+  margin-bottom: 0;
+  max-width: 39rem;
+}
+
+.scroll-cue {
+  align-items: center;
+  bottom: clamp(2.5rem, 7vw, 5.25rem);
+  color: var(--muted);
+  display: grid;
+  font-size: 0.72rem;
+  font-weight: 850;
+  gap: 0.95rem;
+  justify-items: center;
+  left: 50%;
+  position: absolute;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.scroll-cue::before {
+  animation: scroll-line 2.4s ease-in-out infinite;
+  background:
+    linear-gradient(180deg, transparent, rgba(156, 233, 241, 0.95), transparent);
+  content: "";
+  height: clamp(3.5rem, 8vw, 5.75rem);
+  width: 1px;
+}
+
+.scroll-cue::after {
+  border-bottom: 1px solid var(--cyan);
+  border-right: 1px solid var(--cyan);
+  content: "";
+  height: 0.62rem;
+  margin-top: -1.28rem;
+  transform: rotate(45deg);
+  width: 0.62rem;
+}
+
+.scroll-cue span {
+  transition: color 180ms ease;
+}
+
+.scroll-cue:hover span,
+.scroll-cue:focus-visible span {
+  color: var(--ink);
 }
 
 .primary-action,
@@ -270,19 +315,77 @@ h1 {
 }
 
 .intro-band {
+  align-items: center;
   backdrop-filter: blur(0.35rem);
-  background: rgba(11, 16, 18, 0.42);
+  background:
+    radial-gradient(circle at center, rgba(156, 233, 241, 0.15), transparent 20rem),
+    linear-gradient(90deg, transparent, rgba(156, 233, 241, 0.1), transparent),
+    rgba(11, 16, 18, 0.48);
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
+  display: grid;
+  isolation: isolate;
+  justify-items: center;
   margin-top: -1px;
-  padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2.5rem);
+  min-height: clamp(18rem, 38vw, 32rem);
+  overflow: hidden;
+  padding: clamp(3.5rem, 9vw, 8rem) clamp(1.25rem, 3vw, 2.5rem);
+  position: relative;
+  text-align: center;
+}
+
+.intro-band::before,
+.intro-band::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+.intro-band::before {
+  animation: control-grid-shift 18s linear infinite;
+  background:
+    radial-gradient(circle, rgba(156, 233, 241, 0.34) 0 2px, transparent 3px) 1.5rem 1.5rem / 12rem 8rem,
+    linear-gradient(rgba(235, 245, 247, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(235, 245, 247, 0.075) 1px, transparent 1px);
+  background-size: 12rem 8rem, 3.5rem 3.5rem, 3.5rem 3.5rem;
+  inset: -3.5rem;
+  mask-image: radial-gradient(circle at center, black 8%, black 56%, transparent 88%);
+  opacity: 0.84;
+  z-index: -1;
+}
+
+.intro-band::after {
+  animation: control-scan 7s ease-in-out infinite;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(156, 233, 241, 0.03) 28%,
+      rgba(156, 233, 241, 0.34) 50%,
+      rgba(255, 111, 82, 0.09) 58%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 1.9rem,
+      rgba(156, 233, 241, 0.055) 1.9rem calc(1.9rem + 1px)
+    );
+  filter: blur(0.1px);
+  inset: 0 -35%;
+  mask-image: linear-gradient(90deg, transparent, black 24%, black 76%, transparent);
+  opacity: 0.72;
+  z-index: -1;
 }
 
 .intro-band p {
-  font-size: clamp(1.25rem, 3vw, 2.6rem);
-  line-height: 1.22;
+  color: var(--ink);
+  font-size: clamp(2.2rem, 6.2vw, 7rem);
+  font-weight: 900;
+  line-height: 0.96;
   margin-bottom: 0;
-  max-width: 24ch;
+  max-width: 13ch;
+  text-wrap: balance;
+  text-transform: uppercase;
 }
 
 .projects {
@@ -511,6 +614,15 @@ h1 {
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
+.projects-head {
+  justify-content: center;
+  text-align: center;
+}
+
+.projects-head h2 {
+  max-width: none;
+}
+
 h2 {
   font-size: clamp(2rem, 5vw, 4.8rem);
   line-height: 1;
@@ -568,13 +680,6 @@ h2 {
   padding: clamp(1.35rem, 4vw, 4rem);
 }
 
-.project-number {
-  color: var(--ember);
-  font-size: 0.82rem;
-  font-weight: 900;
-  margin-bottom: 0;
-}
-
 h3 {
   font-size: clamp(1.8rem, 4vw, 4.2rem);
   line-height: 0.98;
@@ -582,7 +687,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.project-copy p:not(.project-number),
+.project-copy p,
 .case-body p {
   color: var(--muted);
   font-size: clamp(1rem, 1.4vw, 1.18rem);
@@ -951,6 +1056,42 @@ h3 {
   }
 }
 
+@keyframes control-grid-shift {
+  from {
+    transform: translate3d(-1.75rem, -1.75rem, 0);
+  }
+
+  to {
+    transform: translate3d(1.75rem, 1.75rem, 0);
+  }
+}
+
+@keyframes control-scan {
+  0%,
+  100% {
+    transform: translate3d(-22%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(22%, 0, 0);
+  }
+}
+
+@keyframes scroll-line {
+  0%,
+  100% {
+    opacity: 0.32;
+    transform: scaleY(0.7);
+    transform-origin: top;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
 .case-list {
   color: var(--muted);
   display: grid;
@@ -1077,7 +1218,10 @@ h3 {
   .ambient-stage::before,
   .ambient-mesh,
   .ambient-sweep,
-  .ambient-rings {
+  .ambient-rings,
+  .intro-band::before,
+  .intro-band::after,
+  .scroll-cue::before {
     animation: none;
   }
 
