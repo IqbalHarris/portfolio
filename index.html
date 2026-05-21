@@ -8,7 +8,7 @@
       name="description"
       content="Haris Iqbal's game design portfolio spanning shipped work, combat design, prototypes, systems, and narrative pitches."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=hero-video-only" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -19,6 +19,21 @@
       <span class="ambient-rings"></span>
     </div>
     <header class="hero" id="top">
+      <!--
+        HERO VIDEO SWAP:
+        Replace the source file below with another short muted MP4 loop when
+        changing the hero motion.
+      -->
+      <video
+        class="hero-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/hero-video-loop.mp4" type="video/mp4" />
+      </video>
       <!-- Replace the name and navigation labels here when personalizing the site. -->
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="wordmark" href="#top">Haris Iqbal</a>

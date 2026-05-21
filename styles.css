@@ -7,12 +7,6 @@
   --ember: #ff6f52;
   --page: #0b1012;
   --page-deep: #06090b;
-  /*
-    HERO IMAGE SWAP:
-    Replace only this URL to use your own lead image.
-    Keep it wide enough for desktop crops, ideally 16:9 or wider.
-  */
-  --hero-image: url("assets/Hero Image.jpg");
   color-scheme: dark;
 }
 
@@ -129,13 +123,24 @@ a {
 
 .hero::before {
   background:
-    linear-gradient(90deg, rgba(5, 9, 11, 0.94) 0%, rgba(5, 9, 11, 0.62) 48%, rgba(5, 9, 11, 0.28) 100%),
-    linear-gradient(180deg, rgba(11, 16, 18, 0.08) 34%, var(--page) 100%),
-    var(--hero-image) center / cover no-repeat;
+    linear-gradient(90deg, rgba(5, 9, 11, 0.55) 0%, rgba(5, 9, 11, .55) 45%, rgba(5, 9, 11, .55) 100%),
+    linear-gradient(180deg, rgba(11, 16, 18, 0.22) 30%, var(--page) 100%);
   content: "";
   inset: 0;
   position: absolute;
-  z-index: -2;
+  z-index: 0;
+}
+
+.hero-video {
+  filter: saturate(0.88) contrast(1.05);
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .hero::after {
@@ -199,6 +204,7 @@ a {
   place-content: center start;
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -1051,6 +1057,10 @@ h3 {
     transition: none;
   }
 
+  .hero-video {
+    display: none;
+  }
+
   .consultation,
   .service-item {
     opacity: 1;
@@ -1070,6 +1080,7 @@ h3 {
   .ambient-rings {
     animation: none;
   }
+
 
   .primary-action,
   .case-link,
