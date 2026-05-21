@@ -249,7 +249,7 @@ h1 {
   max-width: 8.4ch;
   text-wrap: balance;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
 }
 
 .hero-summary {
@@ -648,7 +648,7 @@ h2 {
   margin-bottom: 0;
   max-width: 9ch;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
 }
 
 .project-row {
@@ -674,15 +674,47 @@ h2 {
   grid-template-columns: minmax(18rem, 1.35fr) minmax(17rem, 1fr);
   min-height: clamp(22rem, 42vw, 35rem);
   overflow: hidden;
+  position: relative;
   text-decoration: none;
   transition:
     border-color 220ms ease,
     transform 220ms ease;
 }
 
-.project-link:hover {
+.project-link::after {
+  align-items: center;
+  background: rgba(6, 10, 12, 0.74);
+  border: 1px solid rgba(156, 233, 241, 0.42);
+  color: var(--cyan);
+  content: "\2197";
+  display: grid;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 850;
+  height: clamp(2.5rem, 4vw, 3.25rem);
+  inset: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem) auto auto;
+  justify-items: center;
+  opacity: 0.78;
+  position: absolute;
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+  width: clamp(2.5rem, 4vw, 3.25rem);
+}
+
+.project-link:hover,
+.project-link:focus-visible {
   border-color: rgba(156, 233, 241, 0.55);
   transform: translateY(-4px);
+}
+
+.project-link:hover::after,
+.project-link:focus-visible::after {
+  background: rgba(156, 233, 241, 0.16);
+  border-color: var(--cyan);
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 .project-link img,
@@ -705,7 +737,7 @@ h3 {
   line-height: 0.98;
   margin-bottom: 0;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
 }
 
 .project-copy p,
@@ -715,12 +747,6 @@ h3 {
   line-height: 1.65;
   margin-bottom: 0;
   max-width: 30rem;
-}
-
-.project-copy span {
-  color: var(--cyan);
-  font-weight: 800;
-  text-transform: uppercase;
 }
 
 .contact {
