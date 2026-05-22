@@ -22,3 +22,20 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealRows.forEach((row) => revealObserver.observe(row));
+
+/*
+  Keep the main navigation available while browsing the long portfolio pages.
+  Scrolling softens it into a quieter utility state; hover/focus restores clarity.
+*/
+const siteNav = document.querySelector(".site-nav");
+
+const updateNavState = () => {
+  if (!siteNav) {
+    return;
+  }
+
+  siteNav.classList.toggle("is-scrolled", window.scrollY > 36);
+};
+
+updateNavState();
+window.addEventListener("scroll", updateNavState, { passive: true });
