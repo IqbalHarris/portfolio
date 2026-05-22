@@ -505,8 +505,12 @@ h1 {
   justify-items: start;
 }
 
-.consultation-intro h2 {
-  margin-bottom: 1.25rem;
+.consultation-title {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-bottom: 0;
+  max-width: none;
+  text-align: center;
 }
 
 .consultation-intro p:not(.eyebrow),
@@ -640,12 +644,14 @@ h1 {
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
-.projects-head {
+.projects-head,
+.archive-head {
   justify-content: center;
   text-align: center;
 }
 
-.projects-head h2 {
+.projects-head h2,
+.archive-head h2 {
   max-width: none;
 }
 
@@ -761,8 +767,19 @@ h3 {
   border-top: 1px solid var(--line);
   display: grid;
   gap: clamp(2rem, 5vw, 5rem);
-  grid-template-columns: minmax(18rem, 0.82fr) minmax(22rem, 1fr);
+  justify-items: center;
   padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.contact-intro {
+  display: grid;
+  justify-items: center;
+  max-width: 58rem;
+  text-align: center;
+}
+
+.contact-intro h2 {
+  max-width: none;
 }
 
 .clients {
@@ -834,6 +851,7 @@ h3 {
 
 .contact p {
   margin: 1.25rem 0 0;
+  max-width: 42rem;
 }
 
 .contact-form {
@@ -847,6 +865,7 @@ h3 {
   gap: 1rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   padding: clamp(1.2rem, 3vw, 2rem);
+  max-width: 64rem;
   width: 100%;
 }
 
@@ -1409,11 +1428,14 @@ h3 {
 .consult-section-head h2,
 .consult-help h2,
 .consult-next h2 {
-  background: linear-gradient(90deg, var(--ink) 0 58%, var(--ember) 58% 100%);
-  background-clip: text;
-  color: transparent;
   font-size: clamp(2.4rem, 6.5vw, 6.2rem);
   max-width: 9ch;
+}
+
+.consult-section-head h2 span,
+.consult-help h2 span,
+.consult-next h2 span {
+  color: var(--ember);
 }
 
 .consult-offer-grid {
