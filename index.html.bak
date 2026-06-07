@@ -8,6 +8,7 @@
       name="description"
       content="Haris Iqbal's game design portfolio spanning shipped work, combat design, prototypes, systems, and narrative pitches."
     />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
     <link rel="stylesheet" href="styles.css?v=hero-video-only" />
     <script src="script.js" defer></script>
   </head>
@@ -48,7 +49,7 @@
         <p class="eyebrow">Game design / systems / combat</p>
         <h1>Let's make games that players remember.</h1>
         <p class="hero-summary">
-          I have shipped multiple products and helped teams improve their games
+          I have shipped multiple products as a Games Designer and helped teams improve their games
           through iterative feedback as a consultant and video game critic,
           drawing on more than 10 years of experience across game development
           and games press.
@@ -85,8 +86,8 @@
             <div class="project-copy">
               <h3>Dead Island 2</h3>
               <p>
-                Shipped design work across combat, weapon design and balancing,
-                player rewards, exploration, and RPG progression.
+                Worked on gameplay systems across combat, weapon design,
+                progression, rewards, exploration, and general balance.
               </p>
             </div>
           </a>
@@ -141,10 +142,72 @@
         </article>
       </section>
 
+      <section class="testing" aria-labelledby="testing-title">
+        <div class="section-head testing-head">
+          <h2 id="testing-title">Consultations and Testing</h2>
+        </div>
+        <div class="archive-grid">
+          <article class="archive-item reveal">
+            <img
+              src="assets/Ghost Recon.png"
+              alt="Tom Clancy's Ghost Recon Wildlands key art"
+            />
+            <div>
+              <span>Ghost Recon Wildlands</span>
+              <p>
+                Specialist testing support with gameplay and combat feedback
+                for Ubisoft's open-world third-person tactical action game.
+              </p>
+            </div>
+          </article>
+          <article class="archive-item reveal">
+            <img
+              src="assets/SMASH GRAB.jpg"
+              alt="Smash + Grab key art"
+            />
+            <div>
+              <span>Smash + Grab</span>
+              <p>
+                General gameplay testing support for United Front Games' 3v3
+                competitive multiplayer action game built around crew-based
+                street fights and quick tactical decisions.
+              </p>
+            </div>
+          </article>
+          <article class="archive-item reveal">
+            <img
+              src="assets/EVOLVE.jpg"
+              alt="Evolve key art"
+            />
+            <div>
+              <span>Evolve</span>
+              <p>
+                General game and combat testing support for Turtle Rock
+                Studios' asymmetrical multiplayer action game about hunters
+                taking on a player-controlled monster.
+              </p>
+            </div>
+          </article>
+          <article class="archive-item reveal">
+            <img
+              src="assets/FC6.jpg"
+              alt="Far Cry 6 key art"
+            />
+            <div>
+              <span>Far Cry 6</span>
+              <p>
+                Focused feedback around mechanics, exploration, and player
+                experience for Ubisoft's first-person action game in the iconic
+                Far Cry franchise.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="archive" aria-labelledby="archive-title">
-        <div class="section-head">
-          <p class="eyebrow">More projects</p>
-          <h2 id="archive-title">Additional work</h2>
+        <div class="section-head archive-head">
+          <h2 id="archive-title">Other Projects and Prototypes</h2>
         </div>
         <div class="archive-grid">
           <a
@@ -155,8 +218,7 @@
             <div>
               <span>Azeri - Journey's End</span>
               <p>
-                Game jam adventure with animation features, Blueprint logic,
-                technical setup, and co-design direction.
+                A charming shapeshifting adventure made in a week with a small team, following a legendary fox on a final journey to revive a dying world.
               </p>
             </div>
           </a>
@@ -168,8 +230,7 @@
             <div>
               <span>Project Ice Terror</span>
               <p>
-                First-person animation, scripting, dynamic scares, and set-piece
-                concepting for an Antarctic horror prototype.
+                A group uni project set on a remote Antarctic bioweapons base, inspired by iconic franchises like The Thing and Resident Evil.
               </p>
             </div>
           </a>
@@ -181,21 +242,7 @@
             <div>
               <span>Where Wolves Call Home</span>
               <p>
-                Thriller IP pitch using cinematic sequencing, interaction tools,
-                UI, audio mood, and rapid Blueprint prototyping.
-              </p>
-            </div>
-          </a>
-          <a
-            class="archive-item reveal"
-            href="project-john-wick.html"
-          >
-            <img src="assets/john-wick-pitch.jpg" alt="The Legend of John Wick pitch artwork" />
-            <div>
-              <span>The Legend of John Wick</span>
-              <p>
-                An action game pitch translating the John Wick fantasy into a
-                focused game concept.
+                A storytelling pitch for a psychological thriller mixing investigation, action, puzzle solving, and cinematic suspense.
               </p>
             </div>
           </a>
@@ -207,21 +254,7 @@
             <div>
               <span>Cease The Day</span>
               <p>
-                Tongue-in-cheek endless runner with core loop design, props,
-                particles, UI implementation, and animation setup.
-              </p>
-            </div>
-          </a>
-          <a
-            class="archive-item reveal"
-            href="project-getting-home.html"
-          >
-            <img src="assets/getting-home.png" alt="Getting Home adventure game screenshot" />
-            <div>
-              <span>Getting Home</span>
-              <p>
-                Unity adventure project spanning animation, C# systems, dialogue
-                parsing, environmental art, sound, and ambience.
+                A ridiculous endless runner where you play as a not-so-bright vampire rushing to blow out all the lamps, so that they don't wake up the sun.
               </p>
             </div>
           </a>
@@ -238,46 +271,84 @@
           <span></span>
           <span></span>
         </div>
+        <h2 class="consultation-title" id="consultation-title">
+          Game design consultation.
+        </h2>
         <div class="consultation-intro">
-          <p class="eyebrow">Also available</p>
-          <h2 id="consultation-title">Game design consultation.</h2>
           <p>
-            I offer focused outside support for teams who need gameplay to read
-            cleaner, feel stronger, or move from promising to production-ready.
+            Focused design support for demos, vertical slices, and playable
+            builds, from first-pass critique to deeper feedback on game feel,
+            readability, systems, and direction. Combat is one of my
+            specialties.
           </p>
-          <a class="primary-action" href="#contact">Book a conversation</a>
+          <div class="consultation-actions">
+            <a class="primary-action" href="consultation.html">Explore support</a>
+            <a class="case-link" href="#contact">Get in touch</a>
+          </div>
         </div>
 
-        <!-- Replace these service points with the consultation work you want to lead with. -->
+        <!-- Keep the homepage summary short; the full support breakdown lives on the consultation page. -->
         <div class="service-list" aria-label="Consultation services">
           <article class="service-item" style="--service-index: 0">
-            <h3>Combat audits</h3>
+            <h3>Consultation calls</h3>
             <p>
-              Focused feedback on input rhythm, telegraphs, hit response, and
-              the places a fight loses player trust.
+              Talk through your demo, design direction, current challenges, and
+              the kind of support that would move the project forward.
             </p>
           </article>
           <article class="service-item" style="--service-index: 1">
-            <h3>Systems tuning</h3>
+            <h3>Mock reviews</h3>
             <p>
-              Support for movesets, stamina or resource pressure, enemy roles,
-              reward windows, and difficulty curves.
+              Press-informed feedback on first impressions, strengths,
+              weaknesses, readability, and likely player reception.
             </p>
           </article>
           <article class="service-item" style="--service-index: 2">
-            <h3>Encounter reviews</h3>
+            <h3>Addictive combat feel</h3>
             <p>
-              Readability checks for arenas, boss phases, spacing, hazards,
-              escalation beats, and combat pacing.
+              Across different combat styles, strong feedback, meaningful
+              strategy, responsiveness, and clear reactions help make action
+              hard to put down.
             </p>
           </article>
         </div>
       </section>
 
+      <section class="clients" aria-labelledby="clients-title">
+        <p class="eyebrow" id="clients-title">Clients worked with</p>
+        <div class="client-marquee" aria-label="Client and partner logos">
+          <div class="client-track">
+            <div class="client-logo-run">
+              <img class="client-logo-invert" src="assets/client-logos/keywords.png" alt="Keywords Studios" />
+              <img src="assets/client-logos/ea.png" alt="Electronic Arts" />
+              <img class="client-logo-invert" src="assets/client-logos/ubisoft.svg" alt="Ubisoft" />
+              <img src="assets/client-logos/2k.svg" alt="2K Games" />
+              <img src="assets/client-logos/dambuster.png" alt="Dambuster Studios" />
+              <img src="assets/client-logos/plaion.png" alt="Plaion" />
+              <img src="assets/client-logos/uclan.svg" alt="University of Central Lancashire" />
+              <img src="assets/client-logos/futureworks.svg" alt="Futureworks Manchester" />
+              <img class="client-logo-wide" src="assets/client-logos/UOW.png" alt="University of Westminster" />
+              <img class="client-logo-nottingham" src="assets/client-logos/nottingham.svg" alt="University of Nottingham" />
+            </div>
+            <div class="client-logo-run" aria-hidden="true">
+              <img class="client-logo-invert" src="assets/client-logos/keywords.png" alt="" />
+              <img src="assets/client-logos/ea.png" alt="" />
+              <img class="client-logo-invert" src="assets/client-logos/ubisoft.svg" alt="" />
+              <img src="assets/client-logos/2k.svg" alt="" />
+              <img src="assets/client-logos/dambuster.png" alt="" />
+              <img src="assets/client-logos/plaion.png" alt="" />
+              <img src="assets/client-logos/uclan.svg" alt="" />
+              <img src="assets/client-logos/futureworks.svg" alt="" />
+              <img class="client-logo-wide" src="assets/client-logos/UOW.png" alt="" />
+              <img class="client-logo-nottingham" src="assets/client-logos/nottingham.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Get in touch</p>
-          <h2 id="contact-title">Need design support?</h2>
+        <div class="contact-intro">
+          <h2 id="contact-title">Get in touch</h2>
           <p>
             Reach out for consultation, project work, or a focused review of a
             gameplay problem your team is trying to solve.
