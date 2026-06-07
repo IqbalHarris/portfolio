@@ -645,10 +645,20 @@ h1 {
   padding: 0 clamp(1.25rem, 3vw, 2.5rem) clamp(4rem, 8vw, 8rem);
 }
 
+.testing {
+  margin-inline: auto;
+  max-width: 84rem;
+  padding: 0 clamp(1.25rem, 3vw, 2.5rem) clamp(4rem, 8vw, 8rem);
+}
+
 .archive-grid {
   display: grid;
   gap: clamp(1rem, 2vw, 1.5rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.archive .archive-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .archive-item {
@@ -694,7 +704,7 @@ h1 {
 
 .archive-item div {
   display: grid;
-  gap: 1rem;
+  gap: 0.85rem;
   padding: clamp(1.2rem, 3vw, 2rem);
 }
 
@@ -713,6 +723,19 @@ h1 {
   margin-bottom: 0;
 }
 
+.archive .archive-item div {
+  padding: clamp(1rem, 2vw, 1.45rem);
+}
+
+.archive .archive-item span {
+  font-size: clamp(1.05rem, 1.7vw, 1.55rem);
+}
+
+.archive .archive-item p {
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  line-height: 1.55;
+}
+
 .section-head {
   align-items: end;
   display: flex;
@@ -721,13 +744,15 @@ h1 {
 }
 
 .projects-head,
-.archive-head {
+.archive-head,
+.testing-head {
   justify-content: center;
   text-align: center;
 }
 
 .projects-head h2,
-.archive-head h2 {
+.archive-head h2,
+.testing-head h2 {
   max-width: none;
 }
 
@@ -1754,6 +1779,7 @@ h3 {
   .consultation,
   .projects,
   .archive,
+  .testing,
   .clients {
     padding-left: 1rem;
     padding-right: 1rem;
